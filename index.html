@@ -10,31 +10,80 @@
         <script src='https://unpkg.com/tooltip.js/dist/umd/tooltip.min.js'></script>
     
         <script>
-            //import { Calendar } from '@fullcalendar/core'
-            //import multiMonthPlugin from '@fullcalendar/multimonth'
-            //import iCalendarPlugin from '@fullcalendar/icalendar'
 
             document.addEventListener('DOMContentLoaded', function() {
                 
                 var calendarEl = document.getElementById('calendar');
                 
                 var calendar = new FullCalendar.Calendar(calendarEl, {
-                    initialView: 'multiMonthYear',
-                    multiMonthMaxColumns: 1,
+                    
+                    firstDay: 1,
+                    initialView: 'dayGridYear',
+                    //initialView: 'multiMonthYear',
+                    //multiMonthMaxColumns: 1,
+                    displayEventTime: false,
+                    eventDisplay: 'block',
+                    
+                    eventSources: [
+                        {
+                            // Herren 1
+                            url: 'https://www.mytischtennis.de/community/exportICSCalendar?teamIds=2947346',
+                            format: "ics",
+                            color: "darkgreen",
+                            displayEventTime: false
+                        },
+                        {
+                            // Herren 2
+                            url: 'https://www.mytischtennis.de/community/exportICSCalendar?teamIds=2950752',
+                            format: "ics",
+                            color: "green",
+                            displayEventTime: false
+                        },
+                        {
+                            // Damen 1
+                            url: 'https://www.mytischtennis.de/community/exportICSCalendar?teamIds=2947440',
+                            format: "ics",
+                            color: "darkmagenta",
+                            displayEventTime: false
+                        },
+                        {
+                            // Damen 2
+                            url: 'https://www.mytischtennis.de/community/exportICSCalendar?teamIds=2983898',
+                            format: "ics",
+                            color: "darkorchid",
+                            displayEventTime: false
+                        },
+                        {
+                            // Jungen Vorrunde
+                            url: 'https://www.mytischtennis.de/community/exportICSCalendar?teamIds=2952812',
+                            format: "ics",
+                            color: "blue",
+                            displayEventTime: false
+                        },
+                        {
+                            // Jungen Rückrunde
+                            url: 'https://www.mytischtennis.de/community/exportICSCalendar?teamIds=3065766',
+                            format: "ics",
+                            color: "blue",
+                            displayEventTime: false
+                        },
+                        {
+                            // Feiertage Bayern
+                            url: "https://ics.tools/Feiertage/bayern.ics", 
+                            format: "ics",
+                            color: "red"
+                        }
+                    ],
 
                     eventDidMount: function(info) {
                         var tooltip = new Tooltip(info.el, {
-                            title: info.event.extendedProps.description,
+                            title: info.event.start,
                             placement: 'top',
                             trigger: 'hover',
                             container: 'body'
                         });
-                        },
+                        }
 
-                    events: {
-                        url: 'https://www.mytischtennis.de/community/exportICSCalendar?teamIds=2947346',
-                        format: 'ics'
-                    }
                 });
 
 
