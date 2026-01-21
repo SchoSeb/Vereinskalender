@@ -23,6 +23,7 @@
                     //multiMonthMaxColumns: 1,
                     displayEventTime: false,
                     eventDisplay: 'block',
+                    height: 'auto',
                     
                     eventSources: [
                         {
@@ -58,6 +59,14 @@
                                 {
                                     title  : 'Weihnachtsfeier Jugend',
                                     start  : '2026-12-18'
+                                },
+                                {
+                                    title : 'Aerobic',
+                                    groupId: 'sport', // recurrent events in this group move together
+                                    daysOfWeek: [ '2' ],
+                                    startRecur: '2026-03-03',
+                                    endRecur: '2026-05-30',
+                                    startTime: '18:00:00'
                                 }
                             ],
 
