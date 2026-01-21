@@ -8,6 +8,7 @@ html, body {
 #calendar {
   max-width: 1100px;
   margin: 40px auto;
+  padding: 20px;
 }
 
 /* Word wrap of event titles in calendar */
