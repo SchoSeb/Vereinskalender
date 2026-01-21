@@ -27,7 +27,7 @@
                     
                     eventSources: [
                         {
-                            events: [ // put the array in the `events` property
+                            events: [ 
                                 {
                                     title  : 'Jahreshauptversammlung TV',
                                     start  : '2026-01-11T14:30:00'
@@ -59,7 +59,12 @@
                                 {
                                     title  : 'Weihnachtsfeier Jugend',
                                     start  : '2026-12-18'
-                                },
+                                }
+                            ],
+                            color: "orange"
+                        },
+                        {
+                            events: [ 
                                 {
                                     title : 'Aerobic',
                                     groupId: 'sport', // recurrent events in this group move together
@@ -68,7 +73,11 @@
                                     endRecur: '2026-05-30',
                                     startTime: '18:00:00'
                                 }
-                                ,
+                            ],
+                            color: "magenta"
+                        },
+                        {
+                            events: [ 
                                 {
                                     title : 'Training',
                                     groupId: 'training', // recurrent events in this group move together
@@ -78,8 +87,8 @@
                                     startTime: '19:30:00'
                                 }
                             ],
-
-                            color: "orange"
+                            color: "lightblue"
+                            
                         },
     
 
