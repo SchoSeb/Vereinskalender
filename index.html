@@ -136,7 +136,8 @@
                                         hour: '2-digit',
                                         minute: '2-digit',
                                         hour12: false
-                                    }),
+                                    }) + 
+                                    (info.event.extendedProps.location ? ("\n" + info.event.extendedProps.location):""),
                             placement: 'top',
                             trigger: 'hover',
                             container: 'body'
