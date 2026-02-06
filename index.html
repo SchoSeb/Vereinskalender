@@ -26,59 +26,7 @@
                     height: 'auto',
                     
                     eventSources: [
-                        {
-                            events: [ 
-                                {
-                                    title  : 'Jahreshauptversammlung TV',
-                                    start  : '2026-01-11T14:30:00'
-                                },
-                                {
-                                    title  : 'Kinderfasching',
-                                    start  : '2026-01-25T14:00:00'
-                                },
-                                {
-                                    title  : 'Weiberfasching',
-                                    start  : '2026-02-12T19:30:00'
-                                },
-                                {
-                                    title  : 'Faschingstanz',
-                                    start  : '2026-02-14T19:30:00'
-                                },
-                                {
-                                    title  : 'Weltgebetstag der Frauen',
-                                    start  : '2026-03-06'
-                                },
-                                {
-                                    title  : 'TV Maiwanderung',
-                                    start  : '2026-05-01'
-                                },
-                                {
-                                    title  : 'Privatveranstaltung',
-                                    start  : '2026-05-23'
-                                },
-                                {
-                                    title  : 'Privatveranstaltung',
-                                    start  : '2026-07-05'
-                                },
-                                {
-                                    title  : '120 Jahre TV Marienroth',
-                                    start  : '2026-09-26'
-                                },
-                                {
-                                    title  : 'Lottoessen',
-                                    start  : '2026-10-18'
-                                },
-                                {
-                                    title  : 'Privatveranstaltung',
-                                    start  : '2026-11-07'
-                                },
-                                {
-                                    title  : 'Weihnachtsfeier Jugend',
-                                    start  : '2026-12-18'
-                                }
-                            ],
-                            color: "orange"
-                        },
+                        /*
                         {
                             events: [ 
                                 {
@@ -106,7 +54,16 @@
                             color: "lightblue"
                             
                         },
-    
+                        */
+                        
+                       {
+                            // Hallenbelegung
+                            url: './calendardata/TV_Hallenplan.ics',
+                            format: "ics",
+                            color: "orange",
+                            displayEventTime: false
+                        },
+
                        {
                             // Veranstaltungskalender
                             url: './calendardata/Veranstaltungskalender_2026.ics',
@@ -120,7 +77,7 @@
                             //url: 'https://www.mytischtennis.de/community/exportICSCalendar?teamIds=2947346',
                             url: './calendardata/Herren_1.ics',
                             format: "ics",
-                            color: "darkgreen",
+                            color: "#005200",
                             displayEventTime: false
                         },
                         {
@@ -128,7 +85,7 @@
                             //url: 'https://www.mytischtennis.de/community/exportICSCalendar?teamIds=2950752',
                             url: './calendardata/Herren_2.ics',
                             format: "ics",
-                            color: "green",
+                            color: "#009000",
                             displayEventTime: false
                         },
                         {
@@ -136,7 +93,7 @@
                             //url: 'https://www.mytischtennis.de/community/exportICSCalendar?teamIds=2947440',
                             url: './calendardata/Damen_1.ics',
                             format: "ics",
-                            color: "darkmagenta",
+                            color: "purple",
                             displayEventTime: false
                         },
                         {
@@ -152,7 +109,7 @@
                             //url: 'https://www.mytischtennis.de/community/exportICSCalendar?teamIds=2952812',
                             url: './calendardata/Jungen_Vor.ics',
                             format: "ics",
-                            color: "blue",
+                            color: "lightblue",
                             displayEventTime: false
                         },
                         {
@@ -160,7 +117,7 @@
                             //url: 'https://www.mytischtennis.de/community/exportICSCalendar?teamIds=3065766',
                             url: './calendardata/Jungen_Rueck.ics',
                             format: "ics",
-                            color: "blue",
+                            color: "cadetblue",
                             displayEventTime: false
                         },
                         {
