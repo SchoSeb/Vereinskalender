@@ -131,7 +131,11 @@
 
                     eventDidMount: function(info) {
                         var tooltip = new Tooltip(info.el, {
-                            title: info.event.start,
+                            title: "Beginn: " + (info.event.start).toLocaleTimeString("de-DE", {
+                                        hour: '2-digit',
+                                        minute: '2-digit',
+                                        hour12: false
+                                    }),
                             placement: 'top',
                             trigger: 'hover',
                             container: 'body'
