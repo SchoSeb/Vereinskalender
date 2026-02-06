@@ -12,7 +12,8 @@
         <script>
 
             document.addEventListener('DOMContentLoaded', function() {
-                
+
+
                 var calendarEl = document.getElementById('calendar');
                 
                 var calendar = new FullCalendar.Calendar(calendarEl, {
@@ -140,8 +141,19 @@
                             trigger: 'hover',
                             container: 'body'
                         });
+                        },
+
+                    dayCellDidMount: function(arg) {
+                        
+                        // shade months
+                        const monthIndex = arg.date.getMonth();
+                        if (monthIndex % 2 === 1) {
+                            arg.el.style.backgroundColor = '#eeeeee';
                         }
 
+                    }
+
+ 
                 });
 
 
@@ -149,6 +161,7 @@
                 calendar.render();
 
             });
+
 
         </script>
     </head>
