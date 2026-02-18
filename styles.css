@@ -25,6 +25,12 @@ padding: 0 1px;
 white-space: normal;
 }
 
+.fc-day-today {
+    background: #ffc8c8 !important;
+    border: none !important;
+  
+} 
+
 /*
 i wish this required CSS was better documented :(
 https://github.com/FezVrasta/popper.js/issues/674

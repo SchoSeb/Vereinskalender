@@ -131,6 +131,8 @@
                     ],
 
                     eventDidMount: function(info) {
+
+                        // create hover tooltip with time and location
                         var tooltip = new Tooltip(info.el, {
                             title: "Beginn: " + (info.event.start).toLocaleTimeString("de-DE", {
                                         hour: '2-digit',
